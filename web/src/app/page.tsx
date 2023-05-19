@@ -1,5 +1,9 @@
 import { EmptyMemories } from '../components/EmptyMemories'
 
 export default function Home() {
-  return <EmptyMemories />
+  return (
+    <div className="flex flex-1 items-center justify-center">
+      <EmptyMemories />
+    </div>
+  )
 }
