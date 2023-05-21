@@ -74,9 +74,9 @@ export default function App() {
         </TouchableOpacity>
       </View>
 
-      {/* <Text className="text-center font-body text-sm leading-relaxed text-gray-200">
+      <Text className="text-center font-body text-sm leading-relaxed text-gray-200">
         Feito com 💜 no NLW da Rocketseat
-      </Text> */}
+      </Text>
     </View>
   )
 }

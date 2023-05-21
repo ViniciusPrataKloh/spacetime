@@ -10,18 +10,16 @@ app.register(memoriesRoutes)
 app.register(authRoutes)
 
 app.register(cors, {
-  origin: true,
+    origin: true,
 })
 
 app.register(jwt, {
-  secret: 'spacetime',
+    secret: 'spacetime',
 })
 
-app
-  .listen({
+app.listen({
     port: 3333,
     host: '0.0.0.0',
-  })
-  .then(() => {
+}).then(() => {
     console.log('🚀 HTTP server running on port http://localhost:3333')
-  })
+})
