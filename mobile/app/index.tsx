@@ -29,6 +29,7 @@ export default function App() {
   )
 
   async function handleGithubOAuthCode(code: string) {
+    console.log(code)
     const response = await api.post('/register', {
       code,
     })
@@ -42,7 +43,7 @@ export default function App() {
   useEffect(() => {
     if (response?.type === 'success') {
       const { code } = response.params
-      console.log(code)
+      // console.log(code)
 
       handleGithubOAuthCode(code)
     }

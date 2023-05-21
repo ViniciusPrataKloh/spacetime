@@ -32,7 +32,7 @@ export default function Layout() {
     return <SplashScreen />
   }
 
-  console.log(isUserAuthenticated)
+  console.log(`isUserAuthenticated: ${isUserAuthenticated}`)
 
   return (
     <ImageBackground
@@ -48,11 +48,12 @@ export default function Layout() {
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: 'transparent' },
+          // animation: 'fade_from_bottom',
         }}
       >
         <Stack.Screen name="index" redirect={isUserAuthenticated} />
-        <Stack.Screen name="new" />
         <Stack.Screen name="memories" />
+        <Stack.Screen name="new" />
       </Stack>
     </ImageBackground>
   )
