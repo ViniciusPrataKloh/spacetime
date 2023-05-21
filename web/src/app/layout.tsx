@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
 import { Profile } from '@/components/Profile'
-import { Signin } from '@/components/Sigin'
+import { SignIn } from '@/components/Sigin'
 import {
   Bai_Jamjuree as BaiJanjuree,
   Roboto_Flex as Roboto,
@@ -39,13 +39,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {/* Stripes */}
             <div className="absolute bottom-0 right-2 top-0 w-2  bg-stripes pr-2"></div>
 
-            {isAuthenticated ? <Profile /> : <Signin />}
+            {isAuthenticated ? <Profile /> : <SignIn />}
             <Hero />
             <Footer />
           </div>
 
           {/* Right */}
-          <div className="flex flex-col bg-[url(../assets/bg-stars.svg)] bg-cover p-16">
+          <div className="flex max-h-screen flex-col overflow-y-scroll bg-[url(../assets/bg-stars.svg)] bg-cover">
             <div className="flex flex-1 justify-center">{children}</div>
           </div>
         </main>
