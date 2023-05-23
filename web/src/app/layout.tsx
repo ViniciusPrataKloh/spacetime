@@ -41,7 +41,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
             {isAuthenticated ? <Profile /> : <SignIn />}
             <Hero />
-            <Footer />
+
+            <div className="flex w-full items-center justify-center">
+              <Footer />
+            </div>
           </div>
 
           {/* Right */}
